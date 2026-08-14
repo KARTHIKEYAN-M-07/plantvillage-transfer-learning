@@ -1,0 +1,737 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ==============================
+   LIGHT THEME
+============================== */
+
+.light-mode {
+  --bg: #f4f8f4;
+  --card: #ffffff;
+  --text: #1d2b1f;
+  --muted: #68766c;
+  --border: #dce8dd;
+  --green: #319247;
+  --green-dark: #246b35;
+  --soft: #eaf5ec;
+  --footer: #1f3d27;
+  --warning-bg: #fff7df;
+  --warning-text: #805f00;
+  --danger-bg: #ffecec;
+  --danger-text: #b3261e;
+}
+
+.dark-mode {
+  --bg: #101713;
+  --card: #18221b;
+  --text: #edf7ef;
+  --muted: #b4c2b7;
+  --border: #304136;
+  --green: #59bd70;
+  --green-dark: #75d58a;
+  --soft: #223327;
+  --footer: #0b100d;
+  --warning-bg: #3a321a;
+  --warning-text: #ffe08a;
+  --danger-bg: #3b2020;
+  --danger-text: #ff9d9d;
+}
+
+/* ==============================
+   APP
+============================== */
+
+.app {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 8%;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 45px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: var(--green-dark);
+}
+
+.header p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+/* ==============================
+   SETTINGS
+============================== */
+
+.settings {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.theme-button,
+.language-switcher button {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  padding: 9px 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.theme-button:hover,
+.language-switcher button:hover {
+  border-color: var(--green);
+  transform: translateY(-1px);
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.language-switcher span {
+  padding-left: 6px;
+}
+
+.language-switcher button {
+  border: none;
+  background: transparent;
+  padding: 7px 10px;
+}
+
+.language-switcher .active-language {
+  background: var(--green);
+  color: white;
+  border-radius: 8px;
+}
+
+/* ==============================
+   MAIN
+============================== */
+
+.main-container {
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+  padding: 50px 0;
+}
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: var(--soft);
+  color: var(--green-dark);
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin: 10px 0;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.hero h2 span {
+  color: var(--green);
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 15px auto;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ==============================
+   CONTENT
+============================== */
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* ==============================
+   UPLOAD CARD
+============================== */
+
+.upload-card,
+.result-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.upload-card {
+  border: 2px dashed var(--border);
+  text-align: center;
+  min-height: 350px;
+}
+
+.upload-icon {
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+.upload-card h2,
+.result-card h2 {
+  color: var(--green-dark);
+}
+
+.upload-card p,
+.result-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.upload-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 25px;
+  background: var(--green);
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-button:hover {
+  transform: translateY(-2px);
+}
+
+.upload-card small {
+  display: block;
+  margin-top: 15px;
+  color: var(--muted);
+}
+
+/* ==============================
+   IMAGE PREVIEW
+============================== */
+
+.selected-file {
+  margin-top: 20px;
+  padding: 15px;
+  background: var(--soft);
+  border-radius: 12px;
+  color: var(--text);
+}
+
+.selected-file strong {
+  display: block;
+  margin-top: 5px;
+  word-break: break-word;
+}
+
+.image-preview {
+  width: 100%;
+  max-width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* ==============================
+   PREDICT BUTTON
+============================== */
+
+.predict-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: var(--green);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.predict-button:hover {
+  transform: translateY(-2px);
+}
+
+.predict-button:disabled {
+  background: #87958b;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==============================
+   LOADING
+============================== */
+
+.loading {
+  text-align: center;
+  padding: 25px 0;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  margin: auto;
+  border: 5px solid var(--border);
+  border-top: 5px solid var(--green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading p {
+  margin-top: 15px;
+  color: var(--text);
+  font-weight: bold;
+}
+
+.loading small {
+  color: var(--muted);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==============================
+   RESULT PLACEHOLDER
+============================== */
+
+.result-placeholder {
+  margin: 20px auto;
+  padding: 25px;
+  background: var(--soft);
+  border-radius: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* ==============================
+   ERROR
+============================== */
+
+.error-message {
+  margin-top: 15px;
+  padding: 13px;
+  border-radius: 10px;
+  background: var(--danger-bg);
+  color: var(--danger-text);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ==============================
+   ANALYSIS RESULT
+============================== */
+
+.analysis-result {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.result-header {
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.result-header h2 {
+  color: var(--green-dark);
+}
+
+.result-icon {
+  font-size: 55px;
+}
+
+/* ==============================
+   ORIGINAL IMAGE
+============================== */
+
+.original-image-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+}
+
+.original-image-card h3 {
+  color: var(--green-dark);
+}
+
+.result-image {
+  width: 100%;
+  max-width: 500px;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+/* ==============================
+   PREDICTION GRID
+============================== */
+
+.prediction-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.info-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.info-card span {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.info-card small {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.info-card strong {
+  display: block;
+  color: var(--green-dark);
+  font-size: 18px;
+}
+
+/* ==============================
+   WARNING
+============================== */
+
+.warning-card {
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-text);
+  color: var(--warning-text);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.warning-card h3 {
+  margin-top: 0;
+}
+
+.warning-card p {
+  color: var(--warning-text);
+}
+
+.warning-card.danger {
+  background: var(--danger-bg);
+  border-color: var(--danger-text);
+  color: var(--danger-text);
+}
+
+.warning-card.danger p {
+  color: var(--danger-text);
+}
+
+/* ==============================
+   HEALTHY
+============================== */
+
+.healthy-card {
+  background: var(--soft);
+  border: 1px solid var(--green);
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+}
+
+.healthy-card h2 {
+  color: var(--green-dark);
+}
+
+/* ==============================
+   DETAIL CARDS
+============================== */
+
+.detail-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 25px;
+}
+
+.detail-card h3 {
+  color: var(--green-dark);
+  margin-top: 0;
+}
+
+.detail-card h4 {
+  color: var(--text);
+  margin-top: 20px;
+}
+
+.detail-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.detail-card ul {
+  padding-left: 25px;
+}
+
+.detail-card li {
+  margin: 8px 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ==============================
+   STATUS
+============================== */
+
+.status-good {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: var(--soft);
+  color: var(--green-dark);
+  font-weight: bold;
+}
+
+.status-warning {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: var(--warning-bg);
+  color: var(--warning-text);
+  font-weight: bold;
+}
+
+.suitability-status {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.suitability-status.suitable {
+  background: var(--soft);
+  color: var(--green-dark);
+}
+
+.suitability-status.review {
+  background: var(--warning-bg);
+  color: var(--warning-text);
+}
+
+.suitability-status.unsuitable {
+  background: var(--danger-bg);
+  color: var(--danger-text);
+}
+
+/* ==============================
+   GRAD-CAM
+============================== */
+
+.heatmap-image {
+  width: 100%;
+  max-width: 700px;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+}
+
+/* ==============================
+   DISEASE INFORMATION
+============================== */
+
+.disease-information {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.disease-information > h2 {
+  text-align: center;
+  color: var(--green-dark);
+}
+
+/* ==============================
+   RESET
+============================== */
+
+.reset-button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--green);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reset-button:hover {
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+  margin-top: auto;
+  padding: 25px;
+  text-align: center;
+  background: var(--footer);
+  color: white;
+  font-size: 14px;
+}
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 900px) {
+  .prediction-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 18px 5%;
+    text-align: center;
+  }
+
+  .brand {
+    flex-direction: column;
+  }
+
+  .settings {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .main-container {
+    width: 92%;
+    padding: 35px 0;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .prediction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upload-card,
+  .result-card {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .language-switcher {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .logo {
+    font-size: 38px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+}
