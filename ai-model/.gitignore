@@ -1,12 +1,9 @@
-@"
 # Virtual environment
 .venv/
-venv/
-env/
 
-# Python cache
+# Python
 __pycache__/
-*.py[cod]
+*.pyc
 
 # Dataset
 data/PlantVillage/
@@ -14,25 +11,6 @@ data/PlantVillage/
 # Jupyter
 .ipynb_checkpoints/
 
-# IDE
-.vscode/
-.idea/
-
 # OS
 .DS_Store
 Thumbs.db
-
-# Python tools
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-
-# Environment / secrets
-.env
-.env.*
-
-# Temporary files
-*.tmp
-*.temp
-*.log
-"@ | Set-Content .gitignore

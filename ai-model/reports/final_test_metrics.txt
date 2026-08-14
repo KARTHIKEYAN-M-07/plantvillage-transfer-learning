@@ -1,0 +1,10 @@
+FINAL PLANTVILLAGE TEST RESULTS
+======================================================================
+
+Test Accuracy: 0.971986
+Weighted Precision: 0.972229
+Weighted Recall: 0.971986
+Weighted F1: 0.971869
+Macro Precision: 0.964226
+Macro Recall: 0.965861
+Macro F1: 0.964676

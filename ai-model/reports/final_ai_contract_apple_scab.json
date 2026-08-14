@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "model": {
+    "name": "EfficientNet-B0",
+    "classes": 38
+  },
+  "image": {
+    "path": "C:\\Users\\dhine\\plantvillage-transfer-learning\\ai-model\\data\\PlantVillage\\Apple___Apple_scab\\00075aa8-d81a-4184-8541-b692b78d398a___FREC_Scab 3335.JPG",
+    "width": 256,
+    "height": 256
+  },
+  "image_quality": {
+    "valid": true,
+    "quality_level": "good",
+    "width": 256,
+    "height": 256,
+    "blur_score": 139.79,
+    "brightness": 0.4829,
+    "issues": []
+  },
+  "suitability": {
+    "status": "suitable",
+    "score": 98.75,
+    "width": 256,
+    "height": 256,
+    "vegetation_ratio": 0.5948,
+    "green_ratio": 0.5924,
+    "largest_vegetation_component_ratio": 0.5946,
+    "vegetation_component_count": 1,
+    "color_variation": 45.84,
+    "texture_score": 139.79,
+    "issues": []
+  },
+  "prediction": {
+    "class_name": "Apple___Apple_scab",
+    "plant": "Apple",
+    "disease": "Apple scab",
+    "confidence": 99.76,
+    "confidence_level": "high",
+    "needs_review": false
+  },
+  "explanation": {
+    "available": true,
+    "method": "Grad-CAM",
+    "target_class": "Apple___Apple_scab",
+    "heatmap_path": "C:\\Users\\dhine\\plantvillage-transfer-learning\\ai-model\\reports\\final_pipeline_apple_scab_gradcam.jpg"
+  },
+  "disease_information": {
+    "status": "diseased",
+    "severity": "moderate_to_high",
+    "description": "Apple scab is a fungal disease that commonly affects apple leaves and fruit.",
+    "symptoms": [
+      "Olive-green to dark lesions on leaves",
+      "Dark scabby lesions may develop on fruit",
+      "Severe infections can cause premature leaf drop"
+    ],
+    "general_management": [
+      "Remove and dispose of heavily affected plant material",
+      "Maintain good air circulation around plants",
+      "Avoid prolonged leaf wetness where possible",
+      "Use locally recommended disease-management practices"
+    ],
+    "prevention": [
+      "Maintain orchard sanitation",
+      "Remove fallen infected leaves",
+      "Prune appropriately to improve airflow",
+      "Use disease-resistant varieties where available"
+    ]
+  }
+}

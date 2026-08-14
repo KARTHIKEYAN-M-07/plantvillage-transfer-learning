@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "model": {
+    "name": "EfficientNet-B0",
+    "classes": 38
+  },
+  "image": {
+    "path": "test_images\\leaf.jpg",
+    "width": 600,
+    "height": 450
+  },
+  "image_quality": {
+    "valid": true,
+    "quality_level": "good",
+    "width": 600,
+    "height": 450,
+    "blur_score": 1009.02,
+    "brightness": 0.4934,
+    "issues": []
+  },
+  "suitability": {
+    "status": "suitable",
+    "score": 100.0,
+    "width": 600,
+    "height": 450,
+    "vegetation_ratio": 0.8682,
+    "green_ratio": 0.4934,
+    "largest_vegetation_component_ratio": 0.8647,
+    "vegetation_component_count": 1,
+    "color_variation": 56.33,
+    "texture_score": 1009.02,
+    "issues": []
+  },
+  "prediction": {
+    "class_name": "Tomato___Early_blight",
+    "plant": "Tomato",
+    "disease": "Early blight",
+    "confidence": 69.19,
+    "confidence_level": "moderate",
+    "needs_review": true
+  },
+  "explanation": {
+    "available": true,
+    "method": "Grad-CAM",
+    "target_class": "Tomato___Early_blight",
+    "heatmap_path": "C:\\Users\\dhine\\plantvillage-transfer-learning\\ai-model\\reports\\gradcam_Tomato___Early_blight.jpg"
+  },
+  "disease_information": {
+    "status": "diseased",
+    "severity": "moderate_to_high",
+    "description": "Early blight is a fungal disease that commonly causes dark lesions on tomato foliage.",
+    "symptoms": [
+      "Brown circular leaf lesions",
+      "Concentric ring patterns",
+      "Yellowing around lesions",
+      "Older leaves may be affected first"
+    ],
+    "general_management": [
+      "Remove severely affected leaves",
+      "Maintain field sanitation",
+      "Avoid prolonged leaf wetness",
+      "Follow locally recommended management practices"
+    ],
+    "prevention": [
+      "Practice crop rotation where appropriate",
+      "Maintain good airflow",
+      "Use healthy planting material",
+      "Monitor plants regularly"
+    ]
+  }
+}
